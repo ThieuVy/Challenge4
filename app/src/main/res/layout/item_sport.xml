@@ -21,7 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/sport_basketball" />
+            android:src="@drawable/sport_basketball"
+            tools:ignore="ContentDescription" />
 
         <!-- Gradient overlay for better text readability -->
         <View

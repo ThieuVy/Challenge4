@@ -14,8 +14,8 @@ import java.util.List;
 
 public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.SportViewHolder> {
 
-    private Context context;
-    private List<Sport> sportsList;
+    private final Context context;
+    private final List<Sport> sportsList;
 
     public SportsAdapter(Context context, List<Sport> sportsList) {
         this.context = context;
@@ -37,9 +37,7 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.SportViewH
         holder.sportImage.setImageResource(sport.getImageResource());
 
         // Thêm click listener cho CardView
-        holder.cardView.setOnClickListener(v -> {
-            Toast.makeText(context, "Clicked: " + sport.getName(), Toast.LENGTH_SHORT).show();
-        });
+        holder.cardView.setOnClickListener(v -> Toast.makeText(context, "Clicked: " + sport.getName(), Toast.LENGTH_SHORT).show());
     }
 
     @Override
